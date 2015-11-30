@@ -59,8 +59,10 @@
         return {
             restrict: 'A',
             link: function(scope, element){
-                element.on('click', function(){
-                    $window.print();
+                 element.on('click', function () {
+                    setTimeout(function() {
+                        $window.print();
+                    }, 1000);
                 });
             }
         };
